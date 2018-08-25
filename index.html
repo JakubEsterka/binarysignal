@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="esterka.com">
+    <meta name="description" content="Online tool for creating binary signal image from bit array or text.">
+    <title>BinarySignal</title>
+    <!-- Favicons-->
+    <link rel="icon" href="favicon.ico">
+    <!-- CSS-->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+    <!-- jquery-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+</head>
+
+<body class="grey lighten-1">
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="card-panel indigo darken-2">
+                        <span class="white-text">In this online tool you can simply put in array of bits (zeroes and ones) or custom text and this useful little thing will generate binary (logic) signal for you to enjoy. Then just right click on the canvas and the signal and save as an image.
+                        </span>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="logo.png">
+                            <span class="card-title">BinarySignal</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card indigo darken-2">
+                        <div class="card-content white-text">
+                            <div class="row">
+                                <form class="col s12">
+
+                                    <span class="card-title">Input</span>
+
+                                    <div class="switch" style="margin: 15px;">
+                                        <label class="white-text">
+                                        Bit array
+                                        <input id="switch" type="checkbox">
+                                        <span class="lever"></span>
+                                        Text
+                                        </label>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <textarea id="bites" placeholder="e.g. 000111000101" class="materialize-textarea">01000010011010010110111001100001011100100111100101010011011010010110011101101110011000010110110000100000011010010110111000100000011000100110100101101110011000010111001001111001</textarea>
+                                        <label for="bites" class="active">Data</label>
+                                    </div>
+                                    <span class="card-title">Canvas</span>
+
+                                    <div class="input-field col s12">
+                                        <input placeholder="e.g. 100" id="height" type="number" class="validate" value="100">
+                                        <label for="height" class="active">Signal height</label>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <input placeholder="e.g. 10" id="step" type="number" class="validate" value="10">
+                                        <label for="step" class="active">Bit width</label>
+                                    </div>
+
+                                    <div class="input-field col s12">
+                                        <input placeholder="e.g. 1" id="line" type="number" class="validate" value="1">
+                                        <label for="line" class="active">Line width</label>
+                                    </div>
+                            </div> 
+                            <div class="card-action">
+                                <a class="waves-effect waves-light btn white black-text" style="margin-right: 15px;" onclick="generate()">Generate signal</a>
+                                <a class="waves-effect waves-light btn indigo" id="reset" onclick="reset()">Reset</a>
+                            </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card-panel" style="min-height: 140px; overflow-x: scroll;">
+                        <canvas id="canvas" width="1230" height="110" style="border:1px solid #d3d3d3;">
+                            Your browser does not support the HTML5 canvas tag.</canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="page-footer indigo darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">BinarySignal</h5>
+                    <p class="grey-text text-lighten-4">Online tool for creating binary signal image from bit array or text.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <a class="grey-text text-lighten-4">© 2016 Jakub Esterka, All rights reserved.</a>
+                    </div>
+                    <div class="col l6 s12">
+                        <a class="grey-text text-lighten-4 right" href="https://esterka.com">esterka.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/src.min.js"></script>
+</body>
+
+</html>
