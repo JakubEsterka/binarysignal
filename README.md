@@ -11,4 +11,4 @@ In this online tool you can simply put in array of bits (zeroes and ones) or cus
 
 Demo
 --------------------
-Published version available here: http://binarysignal.cloud/
+Published version available here: http://binarysignal.info/
